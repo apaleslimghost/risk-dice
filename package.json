@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "browserify": "^8.0.1",
+    "reactify": "^0.17.1",
+    "risk-dice": "^1.0.0"
+  },
+  "dependencies": {
+    "react": "^0.12.2"
+  },
+  "scripts": {
+    "build": "browserify -t [ reactify --es6 ] index.js -o dist/bundle.js"
+  }
+}
