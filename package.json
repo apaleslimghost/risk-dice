@@ -3,14 +3,15 @@
     "beefy": "^2.1.1",
     "browserify": "^8.0.1",
     "cssify": "^0.6.0",
-    "reactify": "^0.17.1"
+    "reactify": "^0.17.1",
+    "uglifyjs": "^2.3.6"
   },
   "dependencies": {
     "react": "^0.12.2",
     "risk-dice": "^1.0.0"
   },
   "scripts": {
-    "build": "browserify -t [ reactify --es6 ] -t cssify index.js -o dist/bundle.js",
+    "build": "browserify -t [ reactify --es6 ] -t cssify index.js | uglifyjs -cm - > dist/bundle.js",
     "watch": "beefy --live index.js:/dist/bundle.js -- -t [ reactify --es6 ] -t cssify"
   }
 }
