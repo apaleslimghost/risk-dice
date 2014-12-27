@@ -1,0 +1,16 @@
+.dice {
+    font-size: 4em;
+    line-height: 0.8;
+}
+
+.attack {
+    text-align: right;
+}
+
+.attack .die {
+    color: #C21;
+}
+
+.defend .die {
+    color: #12C;
+}
