@@ -1,13 +1,16 @@
 {
   "devDependencies": {
+    "beefy": "^2.1.1",
     "browserify": "^8.0.1",
-    "reactify": "^0.17.1",
-    "risk-dice": "^1.0.0"
+    "cssify": "^0.6.0",
+    "reactify": "^0.17.1"
   },
   "dependencies": {
-    "react": "^0.12.2"
+    "react": "^0.12.2",
+    "risk-dice": "^1.0.0"
   },
   "scripts": {
-    "build": "browserify -t [ reactify --es6 ] index.js -o dist/bundle.js"
+    "build": "browserify -t [ reactify --es6 ] -t cssify index.js -o dist/bundle.js",
+    "watch": "beefy --live index.js:/dist/bundle.js -- -t [ reactify --es6 ] -t cssify"
   }
 }
