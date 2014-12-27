@@ -12,7 +12,7 @@
     "risk-dice": "^1.0.0"
   },
   "scripts": {
-    "build": "browserify -t [ reactify --es6 ] -t cssify index.js | uglifyjs -cm - > dist/bundle.js",
+    "build": "browserify -t [ reactify --es6 ] -g cssify index.js | uglifyjs -cm - > dist/bundle.js",
     "watch": "beefy --live index.js:/dist/bundle.js -- -t [ reactify --es6 ] -t cssify"
   }
 }
