@@ -74,7 +74,6 @@ var App = React.createClass({
   }
 });
 
-React.render(<App/>, document.documentElement);
-document.title = 'Risk dice';
+React.render(<App/>, document.body);
 require('bootstrap/dist/css/bootstrap.css');
 require('./style.css');
